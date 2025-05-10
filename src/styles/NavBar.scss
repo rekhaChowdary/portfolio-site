@@ -1,0 +1,30 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 88%;
+  background-color: #ffffff;
+  box-shadow: 0 12px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 10px 12px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #a30f2b;
+}

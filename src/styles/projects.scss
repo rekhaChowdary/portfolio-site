@@ -1,0 +1,59 @@
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-image {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #f4f4f4;
+  }
+
+  .project-skills {
+    margin: 10px 0;
+    .skill-tag {
+      display: inline-block;
+      background: #e0f7fa;
+      color: #00796b;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin: 4px 4px 0 0;
+      font-size: 0.8rem;
+    }
+  }
+
+  .project-link {
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.button_website {
+  margin-top: 10px;
+}

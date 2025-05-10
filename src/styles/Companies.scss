@@ -1,0 +1,39 @@
+.companies-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 20px 0;
+}
+
+.intro-text {
+  font-size: medium;
+}
+
+.company-logo {
+  width: 240px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.company-logo img:hover {
+  transform: scale(1.1);
+}
+
+.companies-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
