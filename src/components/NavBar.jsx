@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import "@/styles/Navbar.scss";
+import "../styles/NavBar.scss";
 
 const Navbar = () => {
   return (
