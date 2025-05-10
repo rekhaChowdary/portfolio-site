@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Projects.scss";
+import "../styles/projects.scss";
 import hanoverLogo from "../assets/Hanover.jpeg";
 import yumLogo from "../assets/Yum!brands.png";
 import uaeXchangeLogo from "../assetS/UAEXchange.png";
