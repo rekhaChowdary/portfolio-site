@@ -7,46 +7,41 @@ const About = () => {
     <div className="about-container">
       <div className="about-content">
         <h2>About Me</h2>
-        <p>
-          Hi, I'm Rekha, a <strong>Full Stack Web Developer</strong> with over{" "}
-          <strong>10 years of experience</strong> crafting scalable and
-          efficient digital solutions. I specialize in <strong>React</strong>,{" "}
-          <strong>Redux</strong>, <strong>JavaScript</strong>,{" "}
-          <strong>TypeScript</strong>, <strong>Node.js</strong>, and{" "}
-          <strong>Spring Boot</strong>, with a strong focus on delivering{" "}
-          <strong>highly responsive</strong> and{" "}
-          <strong>accessible user interfaces</strong>.
+        <p className="about-text">
+          I'm a <strong>Front-End focused Web Developer</strong> passionate
+          about crafting responsive, user-centric websites and web applications.
         </p>
-        <p>
-          Throughout my career, I've had the privilege to work on{" "}
-          <strong>enterprise-level applications</strong> and collaborate with
-          talented teams, creating seamless and intuitive user experiences. My
-          expertise spans both <strong>frontend</strong> and{" "}
-          <strong>backend development</strong>, with a deep understanding of{" "}
-          <strong>cloud technologies</strong> like <strong>AWS</strong>,{" "}
-          <strong>IBM Cloud</strong>, and{" "}
-          <strong>microservices architecture</strong>.
+        <p className="about-text">
+          With hands-on experience building and managing the front-end of
+          scalable digital products, I strive to deliver interfaces that are not
+          just visually appealing but also optimized for performance and user
+          experience.
         </p>
-        <p>
-          I'm particularly passionate about{" "}
-          <strong>performance optimization</strong>,{" "}
-          <strong>data synchronization</strong>, and integrating{" "}
-          <strong>cloud-based solutions</strong>. My work with{" "}
-          <strong>React Query</strong>, <strong>Redux</strong>, and{" "}
-          <strong>React Hooks</strong> has allowed me to create highly
-          performant applications that scale with ease. Additionally, I have
-          hands-on experience with <strong>CI/CD tools</strong> like{" "}
-          <strong>Jenkins</strong>, <strong>Docker</strong>, and{" "}
-          <strong>Kubernetes</strong>, ensuring seamless deployment and{" "}
-          maintenance of web applications.
+        <p className="about-text">
+          I actively share what I learn about modern web development to help
+          others in the Dev Community grow. You can find me posting insights and
+          tips on{" "}
+          <a
+            href="https://www.linkedin.com/in/rekha-polineni/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.instagram.com/rekha_polineni/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+          .
         </p>
-        <p>
-          Beyond the code, I'm naturally curious, always striving to stay ahead
-          of the curve with the latest trends in web development. When I’m not
-          writing code, I’m focused on expanding my knowledge, learning new
-          technologies, and improving my skills. I'm a firm believer in teamwork
-          and collaboration, and I thrive in environments where I can contribute
-          and learn from others.
+        <p className="about-text">
+          I'm always open to exciting opportunities where I can contribute,
+          grow, and make meaningful impact. If you’re hiring or have a role that
+          aligns with my skills, feel free to reach out—I’d love to connect!
         </p>
         <div>
           <Skills />

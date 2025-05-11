@@ -1,14 +1,28 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link, scroller } from "react-scroll";
 import "../styles/NavBar.scss";
 
-const Navbar = () => {
+const Navbar = ({ ensureSectionsVisible }) => {
   return (
     <nav className="navbar">
       <ul className="nav-links">
         <li>
-          <Link to="home" smooth={true} duration={500} offset={-50} spy={true}>
-            About Me
+          <Link
+            to="about"
+            smooth={true}
+            duration={800}
+            onClick={() => {
+              ensureSectionsVisible();
+              setTimeout(() => {
+                scroller.scrollTo("about", {
+                  duration: 800,
+                  delay: 0,
+                  smooth: "easeInOutQuart",
+                });
+              }, 100);
+            }}
+          >
+            About
           </Link>
         </li>
         <li>
