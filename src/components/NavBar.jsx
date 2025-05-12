@@ -1,62 +1,34 @@
 import React from "react";
-import { Link, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 import "../styles/NavBar.scss";
 
 const Navbar = ({ ensureSectionsVisible }) => {
+  const scrollToSection = (section) => {
+    ensureSectionsVisible();
+    setTimeout(() => {
+      scroller.scrollTo(section, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -50,
+      });
+    }, 200);
+  };
+
   return (
     <nav className="navbar">
       <ul className="nav-links">
         <li>
-          <Link
-            to="about"
-            smooth={true}
-            duration={800}
-            onClick={() => {
-              ensureSectionsVisible();
-              setTimeout(() => {
-                scroller.scrollTo("about", {
-                  duration: 800,
-                  delay: 0,
-                  smooth: "easeInOutQuart",
-                });
-              }, 100);
-            }}
-          >
-            About
-          </Link>
+          <a onClick={() => scrollToSection("about")}>About</a>
         </li>
         <li>
-          <Link
-            to="projects"
-            smooth={true}
-            duration={500}
-            offset={-50}
-            spy={true}
-          >
-            Projects
-          </Link>
+          <a onClick={() => scrollToSection("projects")}>Projects</a>
         </li>
         <li>
-          <Link
-            to="companies"
-            smooth={true}
-            duration={500}
-            offset={-50}
-            spy={true}
-          >
-            Companies
-          </Link>
+          <a onClick={() => scrollToSection("companies")}>Companies</a>
         </li>
         <li>
-          <Link
-            to="contactForm"
-            smooth={true}
-            duration={500}
-            offset={-50}
-            spy={true}
-          >
-            Contact Me
-          </Link>
+          <a onClick={() => scrollToSection("contactForm")}>Contact Me</a>
         </li>
       </ul>
     </nav>

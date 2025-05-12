@@ -7,9 +7,9 @@ import IBM from "../assets/IBM.png";
 
 const companies = [
   { name: "IBM", logo: IBM },
-  { name: "Infosys", logo: NttLogo },
-  { name: "TCS", logo: Capgemini },
-  { name: "Capgemini", logo: HM },
+  { name: "Capgemini", logo: Capgemini },
+  { name: "Happiest Minds", logo: HM },
+  { name: "NTT Data", logo: NttLogo },
 ];
 
 const Companies = () => {

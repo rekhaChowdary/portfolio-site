@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 import LogoImg from "../assets/rekha.jpg";
 import HamMenuIcon from "../assets/cigna.png";
 import HamMenuClose from "../assets/HM.png";
@@ -7,6 +7,18 @@ import "../styles/Header.scss";
 
 const Header = ({ ensureSectionsVisible }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleScrollTo = (target) => {
+    ensureSectionsVisible();
+    setTimeout(() => {
+      scroller.scrollTo(target, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -50,
+      });
+    }, 200);
+  };
 
   return (
     <header className="header">
@@ -21,63 +33,35 @@ const Header = ({ ensureSectionsVisible }) => {
         <div className="header__main">
           <ul className="nav-links">
             <li>
-              <Link
-                to="about"
-                smooth={true}
-                duration={800}
-                onClick={() => {
-                  ensureSectionsVisible();
-                  setTimeout(() => {
-                    scroller.scrollTo("about", {
-                      duration: 800,
-                      delay: 0,
-                      smooth: "easeInOutQuart",
-                    });
-                  }, 100);
-                }}
-              >
+              <a onClick={() => handleScrollTo("about")} className="nav-link">
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                offset={-50}
-                spy={true}
+              <a
+                onClick={() => handleScrollTo("projects")}
+                className="nav-link"
               >
                 Projects
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="companies"
-                smooth={true}
-                duration={500}
-                offset={-50}
-                spy={true}
+              <a
+                onClick={() => handleScrollTo("companies")}
+                className="nav-link"
               >
                 Companies
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="contactForm"
-                smooth={true}
-                duration={500}
-                offset={-50}
-                spy={true}
+              <a
+                onClick={() => handleScrollTo("contactForm")}
+                className="nav-link"
               >
                 Contact Me
-              </Link>
+              </a>
             </li>
           </ul>
-          {/* <Navbar
-            ensureSectionsVisible={() => {
-              if (!sectionsVisible) setSectionsVisible(true);
-            }}
-          /> */}
 
           <div className="header__main-ham-menu-cont">
             <img
@@ -95,23 +79,43 @@ const Header = ({ ensureSectionsVisible }) => {
           <div className="header__sm-menu-content">
             <ul className="header__sm-menu-links">
               <li className="header__sm-menu-link">
-                <a href="#home" onClick={() => setIsMenuOpen(false)}>
-                  Home
-                </a>
-              </li>
-              <li className="header__sm-menu-link">
-                <a href="#about" onClick={() => setIsMenuOpen(false)}>
+                <a
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    handleScrollTo("about");
+                  }}
+                >
                   About
                 </a>
               </li>
               <li className="header__sm-menu-link">
-                <a href="#projects" onClick={() => setIsMenuOpen(false)}>
+                <a
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    handleScrollTo("projects");
+                  }}
+                >
                   Projects
                 </a>
               </li>
               <li className="header__sm-menu-link">
-                <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-                  Contact
+                <a
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    handleScrollTo("companies");
+                  }}
+                >
+                  Companies
+                </a>
+              </li>
+              <li className="header__sm-menu-link">
+                <a
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    handleScrollTo("contactForm");
+                  }}
+                >
+                  Contact Me
                 </a>
               </li>
             </ul>

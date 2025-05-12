@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useState } from "react";
 import { Element } from "react-scroll";
 import { useInView } from "react-intersection-observer";
@@ -39,12 +38,17 @@ const App = () => {
           onViewWork={() => {
             setSectionsVisible(true);
             setTimeout(() => {
-              scroller.scrollTo("about", {
-                duration: 800,
-                delay: 0,
-                smooth: "easeInOutQuart",
-              });
-            }, 100);
+              const el = document.getElementById("about");
+              if (el) {
+                scroller.scrollTo("about", {
+                  duration: 800,
+                  delay: 0,
+                  smooth: "easeInOutQuart",
+                });
+              } else {
+                console.warn("Target element 'about' not found");
+              }
+            }, 300);
           }}
         />
       </Element>
@@ -52,37 +56,58 @@ const App = () => {
       {sectionsVisible && (
         <>
           <Element name="about">
-            <section ref={refs.about[0]} className="section-wrapper show">
+            <section
+              id="about"
+              ref={refs.about[0]}
+              className="section-wrapper show"
+            >
               <About inView={refs.about[1]} />
             </section>
           </Element>
 
           <Element name="projects">
-            <section ref={refs.projects[0]} className="section-wrapper show">
+            <section
+              id="projects"
+              ref={refs.projects[0]}
+              className="section-wrapper show"
+            >
               <Projects inView={refs.projects[1]} />
             </section>
           </Element>
 
           <Element name="contact">
-            <section ref={refs.contact[0]} className="section-wrapper show">
+            <section
+              id="contact"
+              ref={refs.contact[0]}
+              className="section-wrapper show"
+            >
               <Contact inView={refs.contact[1]} />
             </section>
           </Element>
 
           <Element name="companies">
-            <section ref={refs.companies[0]} className="section-wrapper show">
+            <section
+              id="companies"
+              ref={refs.companies[0]}
+              className="section-wrapper show"
+            >
               <Companies inView={refs.companies[1]} />
             </section>
           </Element>
 
           <Element name="contactForm">
-            <section ref={refs.contactForm[0]} className="section-wrapper show">
+            <section
+              id="contactForm"
+              ref={refs.contactForm[0]}
+              className="section-wrapper show"
+            >
               <ContactForm inView={refs.contactForm[1]} />
             </section>
           </Element>
 
           <Element name="footer">
             <section
+              id="footer"
               ref={refs.footer[0]}
               className="section-wrapper show"
               aria-label="Site Footer"
