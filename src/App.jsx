@@ -12,6 +12,7 @@ import Footer from "../src/components/Footer";
 import "./styles/Home.scss";
 import { scroller } from "react-scroll";
 import Header from "./components/Header";
+import Certifications from "./components/Certifications";
 
 const App = () => {
   const [sectionsVisible, setSectionsVisible] = useState(false);
@@ -56,62 +57,41 @@ const App = () => {
       {sectionsVisible && (
         <>
           <Element name="about">
-            <section
-              id="about"
-              ref={refs.about[0]}
-              className="section-wrapper show"
-            >
+            <section id="about" ref={refs.about[0]}>
               <About inView={refs.about[1]} />
             </section>
           </Element>
 
           <Element name="projects">
-            <section
-              id="projects"
-              ref={refs.projects[0]}
-              className="section-wrapper show"
-            >
+            <section id="projects" ref={refs.projects[0]}>
               <Projects inView={refs.projects[1]} />
             </section>
           </Element>
 
           <Element name="contact">
-            <section
-              id="contact"
-              ref={refs.contact[0]}
-              className="section-wrapper show"
-            >
+            <section id="contact" ref={refs.contact[0]}>
               <Contact inView={refs.contact[1]} />
             </section>
           </Element>
 
           <Element name="companies">
-            <section
-              id="companies"
-              ref={refs.companies[0]}
-              className="section-wrapper show"
-            >
+            <section id="companies" ref={refs.companies[0]}>
               <Companies inView={refs.companies[1]} />
             </section>
           </Element>
-
+          <Element name="certifications">
+            <section id="certifications">
+              <Certifications />
+            </section>
+          </Element>
           <Element name="contactForm">
-            <section
-              id="contactForm"
-              ref={refs.contactForm[0]}
-              className="section-wrapper show"
-            >
+            <section id="contactForm" ref={refs.contactForm[0]}>
               <ContactForm inView={refs.contactForm[1]} />
             </section>
           </Element>
 
           <Element name="footer">
-            <section
-              id="footer"
-              ref={refs.footer[0]}
-              className="section-wrapper show"
-              aria-label="Site Footer"
-            >
+            <section id="footer" ref={refs.footer[0]} aria-label="Site Footer">
               <Footer inView={refs.footer[1]} />
             </section>
           </Element>

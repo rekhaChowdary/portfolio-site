@@ -14,19 +14,22 @@ const companies = [
 
 const Companies = () => {
   return (
-    <div className="companies-container">
-      <h1>Companies I've Collaborated With</h1>
-      <p className="intro-text">
-        I'm proud to have collaborated with some awesome companies:
-      </p>
-      <div className="companies-logos">
+    <section className="companies-section">
+      <h2>Companies I've Collaborated With</h2>
+      <p className="intro-text">I'm proud to have worked with:</p>
+      <div className="companies-grid">
         {companies.map((company, index) => (
-          <div className="company-logo" key={index}>
-            <img src={company.logo} alt={company.name} />
+          <div className="company-card" key={index}>
+            <img
+              src={company.logo}
+              alt={company.name}
+              className="company-img"
+            />
+            <p className="company-name">{company.name}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
